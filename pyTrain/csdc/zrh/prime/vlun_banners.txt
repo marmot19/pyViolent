@@ -1,0 +1,4 @@
+3Com 3CDaemon FTP Server Version 2.0
+Ability Server 2.34
+Sami FTP Server 2.0.2
+FreeFloat Ftp Server (Version 1.00)
