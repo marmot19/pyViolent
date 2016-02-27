@@ -5,7 +5,7 @@ Created on 2016年2月27日
 '''
 
 import socket
-
+import sys
 def retBanner(ip, port):
     try:
         socket.setdefaulttimeout(2)
@@ -28,12 +28,17 @@ def checkVulns(banner):
     else:
         print ('[+] FTP Server is not vulnerable.')
 
-def checkVulnsF(banner):
-    f = open('vlun_banners.txt', 'r')
+def checkVulnsF(banner, filename):
+    f = open(filename, 'r')
     for line in f.readlines():
         if line.strip('\n') in banner:
             print ('[+] server is vulnerable: ' + banner.strip('\n') )
+
 def main():
+    if len(sys.argv) == 2:
+        filename = sys.argv[1]
+        print ('[+] Reading Vulnerabilities from ' + filename)
+    
     portList = [20, 21, 25, 80, 110, 443]
     for x in range(0,4):
         ip = '192.168.95.' + str(x)
@@ -41,7 +46,7 @@ def main():
             banner = retBanner(ip, port)
             if banner:
                 print ('[+] ' + ip +"-" + str(port) + ': ' + banner.strip('\n'))
-                checkVulnsF(banner)
+                checkVulnsF(banner, filename)
 if __name__ == '__main__':
     main()
     pass
