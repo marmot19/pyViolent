@@ -12,7 +12,7 @@ print ("[+] Checking for " + banner + "on port " + str(port))
 # portList.append(5)
 # portList.sort()
 # print (portList)
-# wo
+
 pos = portList.index(80)
 print ("There are " + str(pos) + " ports to scan before 80.")
 services = {'ftp':21, 'ssh':22, 'smtp':25, 'http':80}
