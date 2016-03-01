@@ -8,14 +8,14 @@ import hashlib
 def testPass(cryptPass):
     salt = cryptPass[0:2]
     salt_bypte = salt.encode('utf-8')
-    print (salt)
+    print ("原密码: " + cryptPass)
     dictFile = open('dictionary.txt', 'r')
     for line in dictFile.readlines():
         word = line.strip('\n')
         word_byte = word.encode('utf-8')
-        cryptWord = hashlib.sha1(salt_bypte)
-        cryptWord.update(word_byte)
-        print (cryptWord.hexdigest())
+        cryptWord = hashlib.sha512(word_byte)
+#         cryptWord.update(word_byte)
+        print ("字典加密后密码： " + cryptWord.hexdigest())
         if cryptWord == cryptPass:
             print ("[+] Found Password: " + word + '\n')
             return
