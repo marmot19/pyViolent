@@ -1,8 +1,14 @@
 '''
 Created on 2016年3月4日
 
-@author: bpm-citic
+@author: rhzheng
 '''
+# 构造端口扫描器
+# 1.socket.connect的用法
+# 2.optionParser用法
+# 3.使用nmap库，提供nmap.PortScanner方法
+# 4.Thread   from threading import Thread
+# 5.以及使用Semaphore(信号量)对屏幕输出进行加锁操作  acquire release
 
 import optparse
 from threading import *
