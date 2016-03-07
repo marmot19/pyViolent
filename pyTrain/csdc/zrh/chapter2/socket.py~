@@ -1,7 +1,7 @@
 '''
 Created on 2016年3月4日
 
-@author: rhzheng-csdc
+@author: rhzheng
 '''
 # 构造端口扫描器
 # 1.socket.connect的用法
