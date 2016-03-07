@@ -1,3 +1,4 @@
+#coding=utf-8
 import socket
 from warnings import catch_warnings
 # 变量

@@ -1,2 +1,8 @@
 eclipse.preferences.version=1
+encoding//csdc/zrh/chapter1/__init__.py=utf-8
+encoding//csdc/zrh/chapter1/banner.py=utf-8
+encoding//csdc/zrh/chapter1/decryPassword.py=utf-8
+encoding//csdc/zrh/chapter1/unzip.py=utf-8
+encoding//csdc/zrh/chapter2/pexpec.py=utf-8
+encoding//csdc/zrh/chapter2/socket.py=utf-8
 encoding/<project>=UTF-8
